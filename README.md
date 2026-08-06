@@ -1,6 +1,6 @@
 # Dual Ringtone — Mito.H Apps
 
-Official GitHub Pages site for Dual Ringtone, made for Google Pixel 9a dual-SIM users.
+Official site for Dual Ringtone, made for Google Pixel 9a dual-SIM users.
 
 Search targets:
 - Google Pixel デュアルSIM 着信音 鳴り分け
