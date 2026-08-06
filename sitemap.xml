@@ -1,22 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
-        xmlns:xhtml="http://www.w3.org/1999/xhtml">
-  <url>
-    <loc>https://mailmito0216-afk.github.io/mitohapps/</loc>
-    <xhtml:link rel="alternate" hreflang="ja" href="https://mailmito0216-afk.github.io/mitohapps/"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://mailmito0216-afk.github.io/mitohapps/en/"/>
-  </url>
-  <url>
-    <loc>https://mailmito0216-afk.github.io/mitohapps/en/</loc>
-    <xhtml:link rel="alternate" hreflang="ja" href="https://mailmito0216-afk.github.io/mitohapps/"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://mailmito0216-afk.github.io/mitohapps/en/"/>
-  </url>
-  <url>
-    <loc>https://mailmito0216-afk.github.io/mitohapps/tester.html</loc>
-  </url>
-  <url>
-    <loc>https://mailmito0216-afk.github.io/mitohapps/en/tester.html</loc>
-  </url>
-  <url><loc>https://mailmito0216-afk.github.io/mitohapps/support.html</loc></url>
-  <url><loc>https://mailmito0216-afk.github.io/mitohapps/privacy.html</loc></url>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+<url><loc>https://mailmito0216-afk.github.io/mitohapps/</loc></url>
+<url><loc>https://mailmito0216-afk.github.io/mitohapps/en/</loc></url>
+<url><loc>https://mailmito0216-afk.github.io/mitohapps/tester.html</loc></url>
+<url><loc>https://mailmito0216-afk.github.io/mitohapps/en/tester.html</loc></url>
+<url><loc>https://mailmito0216-afk.github.io/mitohapps/support.html</loc></url>
+<url><loc>https://mailmito0216-afk.github.io/mitohapps/privacy.html</loc></url>
 </urlset>
