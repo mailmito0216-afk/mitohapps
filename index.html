@@ -1,100 +1,418 @@
 <!doctype html>
-<html lang="ja"><head>
-<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
-<title>Google Pixel 9aでデュアルSIMの着信音を鳴り分け | Dual Ringtone</title>
-<meta name="description" content="Google Pixel 9aのデュアルSIMでSIM1とSIM2に別々の着信音を設定したい方へ。Dual Ringtoneは着信したSIMを判定し、SIMごとに指定したMP3を再生するAndroidアプリです。クローズドテスター募集中。">
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+
+<title>Google Pixel 9a デュアルSIMの着信音をSIMごとに鳴り分け | Dual Ringtone</title>
+
+<meta name="description" content="Google Pixel 9aのデュアルSIMで、SIM1とSIM2に別々の着信音を設定したい方へ。Dual Ringtoneは着信したSIMを判定し、SIMごとに指定したMP3着信音を再生するPixel 9a専用Androidアプリです。クローズドテスター募集中。">
+
 <meta name="robots" content="index,follow,max-image-preview:large">
+
 <link rel="canonical" href="https://mailmito0216-afk.github.io/mitohapps/">
 <link rel="alternate" hreflang="ja" href="https://mailmito0216-afk.github.io/mitohapps/">
 <link rel="alternate" hreflang="en" href="https://mailmito0216-afk.github.io/mitohapps/en/">
 <link rel="alternate" hreflang="x-default" href="https://mailmito0216-afk.github.io/mitohapps/en/">
+
 <link rel="stylesheet" href="style.css">
-<meta property="og:type" content="website"><meta property="og:title" content="Google Pixel 9aでデュアルSIMの着信音を鳴り分け">
-<meta property="og:description" content="SIM1とSIM2に別々のMP3着信音。Pixel 9a専用 Dual Ringtone。クローズドテスター募集中。">
+
+<meta property="og:type" content="website">
+<meta property="og:title" content="Google Pixel 9a デュアルSIMの着信音をSIMごとに鳴り分け">
+<meta property="og:description" content="SIM1とSIM2に別々のMP3着信音。Google Pixel 9a専用 Dual Ringtone。クローズドテスター募集中。">
 <meta property="og:url" content="https://mailmito0216-afk.github.io/mitohapps/">
 <meta property="og:image" content="https://mailmito0216-afk.github.io/mitohapps/assets/icon.png">
-</head><body>
-<header class="header"><div class="wrap header-inner">
-<a class="brand" href="./"><img src="assets/icon.png" alt="Dual Ringtone icon">Mito.H Apps</a>
-<nav class="nav"><a href="#problem">着信音問題</a><a href="#how">使い方</a><a href="tester.html">テスター募集</a><a class="lang" href="en/" lang="en">English</a></nav>
-</div></header>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "SoftwareApplication",
+      "name": "Dual Ringtone",
+      "applicationCategory": "UtilitiesApplication",
+      "operatingSystem": "Android",
+      "description": "Google Pixel 9aのデュアルSIMで、着信したSIMを判定し、SIM1とSIM2にそれぞれ指定したMP3着信音を再生するAndroidアプリ。",
+      "url": "https://mailmito0216-afk.github.io/mitohapps/",
+      "author": {
+        "@type": "Organization",
+        "name": "Mito.H Apps"
+      }
+    },
+    {
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "Pixel 9aでSIMごとに着信音を変える方法はありますか？",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Dual Ringtoneでは、Google Pixel 9aのSIM1とSIM2にそれぞれ別のMP3着信音を設定できます。"
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Pixel 9a以外でも使えますか？",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "現在の正式な対応・検証対象はGoogle Pixel 9aです。"
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "SIM1とSIM2に違う曲を設定できますか？",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "はい。SIM1とSIM2それぞれに別のMP3ファイルを選択できます。"
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "なぜPixel標準着信音を「なし」にするのですか？",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Pixel標準着信音とDual Ringtoneの着信音が二重に鳴るのを防ぐためです。"
+          }
+        }
+      ]
+    }
+  ]
+}
+</script>
+</head>
+
+<body>
+
+<header class="header">
+<div class="wrap header-inner">
+
+<a class="brand" href="./">
+<img src="assets/icon.png" alt="Dual Ringtone icon">
+Mito.H Apps
+</a>
+
+<nav class="nav">
+<a href="#problem">着信音問題</a>
+<a href="#how">使い方</a>
+<a href="tester.html">テスター募集</a>
+<a class="lang" href="en/" lang="en">English</a>
+</nav>
+
+</div>
+</header>
+
 
 <main>
-<section class="hero"><div class="wrap hero-grid">
+
+<section class="hero">
+<div class="wrap hero-grid">
+
 <div>
+
 <p class="kicker">Made for Google Pixel 9a</p>
+
 <h1>会社SIMと個人SIM。<br>着信音を、別々に。</h1>
-<p class="lead"><strong>Dual Ringtone</strong>は、Google Pixel 9aのデュアルSIMでSIM1とSIM2に別々のMP3着信音を設定するためのAndroidアプリです。電話が鳴った瞬間に、どちらの番号への着信かを音で聞き分けられます。</p>
-<div class="actions"><a class="btn primary" href="tester.html">クローズドテストに参加する</a><a class="btn secondary" href="#problem">仕組みを見る</a></div>
+
+<p class="lead">
+<strong>Dual Ringtone</strong>は、Google Pixel 9aのデュアルSIMで
+SIM1とSIM2に別々のMP3着信音を設定するためのAndroidアプリです。
+電話が鳴った瞬間に、どちらの番号への着信かを音で聞き分けられます。
+</p>
+
+<div class="actions">
+<a class="btn primary" href="tester.html">クローズドテストに参加する</a>
+<a class="btn secondary" href="#problem">仕組みを見る</a>
+</div>
+
 <p class="small">正式な開発・検証対象：Google Pixel 9a</p>
+
 </div>
+
+
 <div class="hero-media">
-<div class="icon-card"><img src="assets/icon.png" alt="Dual Ringtone app icon"></div>
-<div class="phone-shot"><img src="assets/app-main-ja.png" alt="Dual Ringtoneのメイン画面。SIM1とSIM2に別々のMP3着信音を設定できる。"></div>
-</div>
-</div></section>
 
-<section class="section" id="problem"><div class="wrap">
-<h2>Pixel 9aで「SIMごとに着信音を変えたい」</h2>
+<div class="icon-card">
+<img src="assets/icon.png" alt="Dual Ringtone app icon">
+</div>
+
+<div class="phone-shot">
+<img src="assets/app-main-ja.png"
+alt="Google Pixel 9aでSIM1とSIM2に別々のMP3着信音を設定するDual Ringtoneのメイン画面">
+</div>
+
+</div>
+
+</div>
+</section>
+
+
+<section class="section" id="problem">
+<div class="wrap">
+
+<h2>Google Pixel 9aで「SIMごとに着信音を変えたい」</h2>
+
 <div class="problem">
-<p>Google Pixel 9aでデュアルSIMを使っていると、会社用の番号なのか、個人用の番号なのかを、画面を見る前に知りたいことがあります。</p>
-<p>しかしPixel 9aの標準設定には、SIM1とSIM2へ別々の着信音を割り当てる機能がありません。</p>
-<p><strong>Dual Ringtoneは、その一点をシンプルに解決するために作りました。</strong></p>
-</div>
-</div></section>
 
-<section class="section white"><div class="wrap">
-<h2>標準設定との違い</h2>
+<p>
+Google Pixel 9aでデュアルSIMを使っていると、
+会社用SIMへの着信なのか、個人用SIMへの着信なのかを、
+画面を見る前に音で聞き分けたいことがあります。
+</p>
+
+<p>
+しかしGoogle Pixel 9aでは、標準機能だけで
+デュアルSIMのSIM1とSIM2に別々の着信音を設定することができません。
+</p>
+
+<p>
+<strong>
+Dual Ringtoneは、Pixel 9aでSIMごとに着信音を鳴り分けたいという
+その一点をシンプルに解決するために作りました。
+</strong>
+</p>
+
+</div>
+
+</div>
+</section>
+
+
+<section class="section white">
+<div class="wrap">
+
+<h2>Pixel標準の着信音設定との違い</h2>
+
 <div class="compare">
-<div class="compare-box"><h3>Pixel標準</h3><div class="sim-pill"><span>SIM1 会社</span><strong>♪ 同じ音</strong></div><div class="sim-pill"><span>SIM2 個人</span><strong>♪ 同じ音</strong></div></div>
+
+<div class="compare-box">
+
+<h3>Pixel標準</h3>
+
+<div class="sim-pill">
+<span>SIM1 会社</span>
+<strong>♪ 同じ音</strong>
+</div>
+
+<div class="sim-pill">
+<span>SIM2 個人</span>
+<strong>♪ 同じ音</strong>
+</div>
+
+</div>
+
+
 <div class="arrow">→</div>
-<div class="compare-box"><h3>Dual Ringtone</h3><div class="sim-pill"><span>SIM1 会社</span><strong>♪ Company</strong></div><div class="sim-pill"><span>SIM2 個人</span><strong>♫ Personal</strong></div></div>
+
+
+<div class="compare-box">
+
+<h3>Dual Ringtone</h3>
+
+<div class="sim-pill">
+<span>SIM1 会社</span>
+<strong>♪ Company</strong>
 </div>
-</div></section>
 
-<section class="section"><div class="wrap"><h2>Dual Ringtoneでできること</h2><div class="grid3">
-<div class="card"><h3>SIM1 / SIM2を判定</h3><p>どちらのSIMに着信したかを判定し、そのSIMに設定した音を再生します。</p></div>
-<div class="card"><h3>好きなMP3を個別指定</h3><p>SIM1用、SIM2用として端末内のMP3ファイルをそれぞれ選択できます。</p></div>
-<div class="card"><h3>Pixel 9a専用設計</h3><p>実機Pixel 9aを正式な開発・検証対象としています。</p></div>
-</div></div></section>
+<div class="sim-pill">
+<span>SIM2 個人</span>
+<strong>♫ Personal</strong>
+</div>
 
-<section class="section white" id="how"><div class="wrap media-grid">
+</div>
+
+</div>
+
+</div>
+</section>
+
+
+<section class="section">
+<div class="wrap">
+
+<h2>Dual Ringtoneでできること</h2>
+
+<div class="grid3">
+
+<div class="card">
+<h3>SIM1 / SIM2を判定</h3>
+<p>
+どちらのSIMに着信したかを判定し、
+そのSIMに設定した着信音を再生します。
+</p>
+</div>
+
+<div class="card">
+<h3>好きなMP3をSIMごとに指定</h3>
+<p>
+SIM1用、SIM2用として端末内のMP3ファイルを
+それぞれ個別に選択できます。
+</p>
+</div>
+
+<div class="card">
+<h3>Google Pixel 9a専用設計</h3>
+<p>
+実機のGoogle Pixel 9aを正式な開発・検証対象としています。
+</p>
+</div>
+
+</div>
+
+</div>
+</section>
+
+
+<section class="section white" id="how">
+<div class="wrap media-grid">
+
 <div>
-<h2>設定はシンプルです</h2>
+
+<h2>Pixel 9aでSIM別着信音を設定する方法</h2>
+
 <ol class="steps">
-<li>Pixel標準の着信音を「マイサウンド → なし」に設定します。</li>
-<li>SIM1用のMP3を選択します。</li>
-<li>SIM2用に別のMP3を選択します。</li>
-<li>着信したSIMに対応するMP3が自動再生されます。</li>
+
+<li>
+Pixel標準の着信音を「マイサウンド → なし」に設定します。
+</li>
+
+<li>
+Dual RingtoneでSIM1用のMP3を選択します。
+</li>
+
+<li>
+SIM2用に別のMP3を選択します。
+</li>
+
+<li>
+着信したSIMに対応するMP3着信音が自動再生されます。
+</li>
+
 </ol>
-</div>
-<div class="media-card"><img src="assets/setup-ja.png" alt="Dual Ringtoneのセットアップ手順画面"></div>
-</div></section>
 
-<section class="section"><div class="wrap media-grid">
-<div class="media-card"><img src="assets/about-ja.png" alt="Dual Ringtone About画面"></div>
+</div>
+
+
+<div class="media-card">
+
+<img src="assets/setup-ja.png"
+alt="Google Pixel 9aでSIM1とSIM2に別々の着信音を設定するDual Ringtoneのセットアップ手順">
+
+</div>
+
+</div>
+</section>
+
+
+<section class="section">
+<div class="wrap media-grid">
+
+<div class="media-card">
+
+<img src="assets/about-ja.png"
+alt="Google Pixel 9a専用Dual Ringtoneの対応環境を表示したAbout画面">
+
+</div>
+
 <div>
-<h2>Pixel 9a専用として設計・検証</h2>
-<p>Dual Ringtoneは、Google Pixel 9a、Android 17、Google 電話アプリ、デュアルSIM環境を基準に設計・検証しています。</p>
-<p>対応範囲を広く見せるのではなく、実際に確認できた環境を明確にしています。</p>
+
+<h2>Google Pixel 9a専用として設計・検証</h2>
+
+<p>
+Dual Ringtoneは、
+Google Pixel 9a、Android 17、Google 電話アプリ、
+デュアルSIM環境を基準に設計・検証しています。
+</p>
+
+<p>
+対応範囲を広く見せるのではなく、
+実際に確認できた環境を明確にしています。
+</p>
+
 </div>
-</div></section>
 
-<section class="section white"><div class="wrap callout">
+</div>
+</section>
+
+
+<section class="section white">
+<div class="wrap callout">
+
 <p class="good">Google Play クローズドテスター募集中</p>
-<h2>Pixel 9aで試してくださる方を探しています</h2>
-<p>SIM1・SIM2への実際の着信、再起動後の動作、着信音のループや停止などを確認していただけるPixel 9aユーザーを募集しています。</p>
-<div class="actions"><a class="btn primary" href="tester.html">参加方法を見る</a></div>
-</div></section>
 
-<section class="section faq"><div class="wrap"><h2>よくある質問</h2>
-<details><summary>Pixel 9a以外でも使えますか？</summary><p>現在の正式な対応・検証対象はGoogle Pixel 9aです。</p></details>
-<details><summary>SIM1とSIM2に違う曲を設定できますか？</summary><p>はい。それぞれに別のMP3ファイルを選択できます。</p></details>
-<details><summary>なぜPixel標準着信音を「なし」にするのですか？</summary><p>標準着信音とDual Ringtoneの音が二重に鳴るのを防ぐためです。</p></details>
-</div></section>
+<h2>Pixel 9aのデュアルSIM環境で試してくださる方を探しています</h2>
+
+<p>
+SIM1・SIM2への実際の着信、
+再起動後の動作、
+着信音のループや停止などを確認していただける
+Google Pixel 9aユーザーを募集しています。
+</p>
+
+<div class="actions">
+<a class="btn primary" href="tester.html">参加方法を見る</a>
+</div>
+
+</div>
+</section>
+
+
+<section class="section faq">
+<div class="wrap">
+
+<h2>Pixel 9a デュアルSIM着信音のよくある質問</h2>
+
+<details>
+<summary>Pixel 9aでSIMごとに着信音を変える方法はありますか？</summary>
+<p>
+Dual Ringtoneでは、Google Pixel 9aのSIM1とSIM2に
+それぞれ別のMP3着信音を設定できます。
+</p>
+</details>
+
+<details>
+<summary>Pixel 9a以外でも使えますか？</summary>
+<p>
+現在の正式な対応・検証対象はGoogle Pixel 9aです。
+</p>
+</details>
+
+<details>
+<summary>SIM1とSIM2に違う曲を設定できますか？</summary>
+<p>
+はい。それぞれに別のMP3ファイルを選択できます。
+</p>
+</details>
+
+<details>
+<summary>なぜPixel標準着信音を「なし」にするのですか？</summary>
+<p>
+Pixel標準着信音とDual Ringtoneの着信音が
+二重に鳴るのを防ぐためです。
+</p>
+</details>
+
+</div>
+</section>
+
 </main>
 
-<footer class="footer"><div class="wrap">
-<div class="footer-links"><a href="tester.html">クローズドテスター募集</a><a href="support.html">Support</a><a href="privacy.html">Privacy Policy</a><a href="en/" lang="en">English</a></div>
+
+<footer class="footer">
+<div class="wrap">
+
+<div class="footer-links">
+
+<a href="tester.html">クローズドテスター募集</a>
+<a href="support.html">Support</a>
+<a href="privacy.html">Privacy Policy</a>
+<a href="en/" lang="en">English</a>
+
+</div>
+
 <p>© Mito.H Apps / Dual Ringtone</p>
-</div></footer></body></html>
+
+</div>
+</footer>
+
+</body>
+</html>
