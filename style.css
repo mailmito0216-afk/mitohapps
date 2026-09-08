@@ -56,3 +56,37 @@ h3{font-size:1.15rem;margin:0 0 .35em}.lead{font-size:clamp(1.05rem,2vw,1.27rem)
   letter-spacing: 0.02em;
   box-shadow: 0 4px 12px rgba(21, 94, 239, 0.12);
 }
+.tester-callout {
+  margin: 26px 0 22px;
+  padding: 22px 24px;
+  background: #ffffff;
+  border: 2px solid #155eef;
+  border-radius: 18px;
+  box-shadow: 0 8px 24px rgba(21, 94, 239, 0.08);
+}
+
+.tester-callout h2 {
+  margin: 0 0 14px;
+  font-size: 1.35rem;
+  line-height: 1.4;
+  word-break: keep-all;
+}
+
+.tester-callout p {
+  margin: 10px 0;
+  line-height: 1.8;
+}
+
+.tester-callout .btn {
+  margin-top: 8px;
+}
+
+@media (max-width: 880px) {
+  .tester-callout {
+    padding: 18px;
+  }
+
+  .tester-callout h2 {
+    font-size: 1.2rem;
+  }
+}
